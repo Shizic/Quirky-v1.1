@@ -22,10 +22,11 @@ body {
     padding: 0 0 20px 0;
     border-bottom: 1.3px solid #fff;
     color: #0ef;
+    animation: slideTop 2s ease forwards;
 }
 form {
     margin-top: 50px;
-    transition: all 4s ease-in-out;
+    animation: slideBottom 2s ease forwards;
 }
 .form-control {
     width: 600px;
@@ -93,4 +94,31 @@ input {
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+    animation: slideRight 1s ease forwards;
    }
+   @keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }}
+    @keyframes slideBottom {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateY(0);;
+            opacity: 1;
+        }}
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+        
+            100% {
+                transform: translateX(0);;
+                opacity: 1;
+            }
+        }        
